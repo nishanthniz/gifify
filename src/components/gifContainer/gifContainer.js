@@ -7,6 +7,7 @@ const GifContainer = ({ searchValue }) => {
     let nextKey = "";
     const [gifData, setGifData] = useState([]);
 
+
     useEffect(() => {
         window.addEventListener('scroll', infiniteScroll);
         clearValues();

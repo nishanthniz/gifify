@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import TrendingList from '../trending_list/trendingList';
 import classes from './carousel.module.css';
 
-const Carousel = ({ gifTrendingList }) => {
+const Carousel = ({ gifTrendingList, isLoading }) => {
     const [pageCnt, setPageCnt] = useState(1);
     const [tempTrendingList, setTempTrendingList] = useState([]);
 
@@ -29,7 +29,7 @@ const Carousel = ({ gifTrendingList }) => {
             {pageCnt > 1 ? <div className={`${classes.carousel__arrow} ${classes.left}`} onClick={() => splitTrendingList('left')}>
                 <i className="fa fa-chevron-left" aria-hidden="true"></i>
             </div> : null}
-            {gifTrendingList.length ? <TrendingList gifTrendingList={tempTrendingList} /> : <h3 className='empty__data'>No Data Available</h3>}
+            <TrendingList isLoading={isLoading} gifTrendingList={tempTrendingList} />
             {!(pageCnt >= (gifTrendingList.length / 5)) ? <div className={`${classes.carousel__arrow} ${classes.right}`} onClick={() => splitTrendingList('right')}>
                 <i className="fa fa-chevron-right" aria-hidden="true"></i>
             </div> : null}

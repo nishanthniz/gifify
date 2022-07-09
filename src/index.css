@@ -1,6 +1,5 @@
 @import './assets/styles/layout/grid.css';
 @import './assets/styles/components/form.css';
-@import './assets/styles/components/loader.css';
 
 * {
     margin: 0;

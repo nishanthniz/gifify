@@ -9,11 +9,14 @@ const TrendingGIFS = () => {
     const tempTrendingData = [];
     const [trendingTerm, setTrendingTerm] = useState([]);
     const [trendingData, setTrendingData] = useState([]);
+    const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
+        
         getTrendingGifs('/trending_terms?&limit=50').then((resp) => {
-            document.body.classList.add('loading__indicator');
             setTrendingTerm(resp.results);
+        }).catch((err) => {
+            setLoading(false)
         });
     }, []);
 
@@ -28,9 +31,11 @@ const TrendingGIFS = () => {
                 tempTrendingData.push(resp.results[0]);
                 incTermCnt++;
                 getThumbnailOfTrending();
+            }).catch((err) => {
+               setLoading(false)
             });
         } else {
-            document.body.classList.remove('loading__indicator');
+            setLoading(false)
             setTrendingData(tempTrendingData);
         }
     }
@@ -38,7 +43,7 @@ const TrendingGIFS = () => {
     return (
         <div className={classes.trending__container}>
             <h2>Trending Tenor Searches</h2>
-            <Carousel gifTrendingList={trendingData} />
+            <Carousel isLoading={isLoading} gifTrendingList={trendingData} />
         </div>
     );
 };
