@@ -1,0 +1,16 @@
+.navbar__searchbar {
+    position: relative;
+}
+
+.navbar__searchbar .search___icon {
+    top: 1.8rem;
+    right: 1.8rem;
+    position: absolute;
+}
+
+.navbar__searchbar .search___icon i {
+    cursor: pointer;
+    color: #171717;
+    font-size: 1.6rem;
+    line-height: 1rem;
+}

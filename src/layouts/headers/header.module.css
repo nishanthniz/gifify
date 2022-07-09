@@ -1,0 +1,7 @@
+.navbar__bg {
+    width: 100%;
+    padding: 1.2rem;
+    position: fixed;
+    z-index: 999;
+    background-image: linear-gradient(90deg, #4cafff, #2e93e6);
+}

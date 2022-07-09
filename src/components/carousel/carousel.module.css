@@ -1,0 +1,23 @@
+.carousel__container {
+    display: flex;
+    align-items: center;
+}
+
+.carousel__arrow {
+    opacity: 0.3;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: opacity .25s ease-in-out;
+}
+
+.carousel__container:hover .carousel__arrow {
+    opacity: 1;
+}
+
+.carousel__arrow.left {
+    padding-right: 0.9rem;
+}
+
+.carousel__arrow.right {
+    padding-left: 0.9rem;
+}

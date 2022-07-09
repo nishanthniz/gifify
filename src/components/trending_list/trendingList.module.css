@@ -1,0 +1,7 @@
+.trending__list__container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20.6rem, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+}

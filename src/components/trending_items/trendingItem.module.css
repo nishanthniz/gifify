@@ -1,0 +1,27 @@
+.trending__item__wrapper {
+    cursor: pointer;
+}
+
+.trending__img img {
+    max-height: 9rem;
+    min-width: 20.6rem;
+    object-fit: cover;
+    object-position: 50%;
+    border-radius: 0.5rem;
+    transition: all .15s ease-in;
+}
+
+.trending__img img:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 0.7rem 1.4rem rgb(50 50 93 / 10%), 0 0.3rem 0.6rem rgb(0 0 0 / 8%);
+}
+
+.trending__term {
+    color: #000;
+    font-weight: 600;
+    overflow: hidden;
+    font-size: 1.6rem;
+    padding-top: 0.5rem;
+    text-overflow: ellipsis;
+}
