@@ -21,7 +21,9 @@ const TrendingGIFS = () => {
     }, []);
 
     useEffect(() => {
-        getThumbnailOfTrending();
+        if(trendingTerm.length) {
+            getThumbnailOfTrending();
+        }
     }, [trendingTerm]);
 
     const getThumbnailOfTrending = () => {

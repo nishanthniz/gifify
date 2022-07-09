@@ -5,7 +5,7 @@ import classes from './trendingList.module.css';
 const TrendingList = ({ gifTrendingList,isLoading }) => {
     return (
         <div className={classes.trending__list__container}>
-            {isLoading && [...Array(5).keys()].map((s) => <Skeleton width="206px" height="100px" />)}
+            {isLoading && [...Array(5).keys()].map((s) => <Skeleton key={s} width="206px" height="100px" />)}
             {gifTrendingList.map((eachGifData) => !isLoading && <TrendingItem key={eachGifData.id} gifData={eachGifData} />)}
         </div>
     );
